@@ -1,0 +1,59 @@
+
+I/MainActivity(22192): 148
+I/MainActivity(22192): 149
+I/MainActivity(22192): 150
+I/MainActivity(22192): 151
+F/libc    (22192): Fatal signal 11 (SIGSEGV) at 0x00000000 (code=128), thread 22192 (e.blot.ndkcrash)
+I/DEBUG   (  135): *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+I/DEBUG   (  135): Build fingerprint: 'Lenovo/K900_ROW/K900_ROW:4.2.1/JOP40D/K900_ROW_1_S_2_009_0288_131227:user/releasekey'
+I/DEBUG   (  135): Revision: '0'
+I/DEBUG   (  135): pid: 22192, tid: 22192, name: e.blot.ndkcrash  >>> com.example.blot.ndkcrash <<<
+I/DEBUG   (  135): signal 11 (SIGSEGV), code 128 (?), fault addr 00000000
+I/DEBUG   (  135):     eax 0000000c  ebx 5efef264  ecx bfd0a5ac  edx ef4f2777
+I/DEBUG   (  135):     esi bfd0a5dc  edi 5bb27ee0
+I/DEBUG   (  135):     xcs 00000073  xds 0000007b  xes 0000007b  xfs 00000000  xss 0000007b
+I/DEBUG   (  135):     eip 5efbab99  ebp 0000000c  esp bfd0a4ac  flags 00010212
+I/DEBUG   (  135): 
+I/DEBUG   (  135): backtrace:
+I/DEBUG   (  135):     #00  pc 000c4b99  /data/app-lib/com.example.blot.ndkcrash-1/libnative-lib.so
+I/DEBUG   (  135): 
+I/DEBUG   (  135): stack:
+I/DEBUG   (  135):          bfd0a46c  00000000  
+I/DEBUG   (  135):          bfd0a470  00000000  
+I/DEBUG   (  135):          bfd0a474  00000000  
+I/DEBUG   (  135):          bfd0a478  00000000  
+I/DEBUG   (  135):          bfd0a47c  00000000  
+I/DEBUG   (  135):          bfd0a480  00000000  
+I/DEBUG   (  135):          bfd0a484  00000000  
+I/DEBUG   (  135):          bfd0a488  00000000  
+I/DEBUG   (  135):          bfd0a48c  00000000  
+I/DEBUG   (  135):          bfd0a490  00000000  
+I/DEBUG   (  135):          bfd0a494  00000000  
+I/DEBUG   (  135):          bfd0a498  00000000  
+I/DEBUG   (  135):          bfd0a49c  00000000  
+I/DEBUG   (  135):          bfd0a4a0  00000000  
+I/DEBUG   (  135):          bfd0a4a4  00000000  
+I/DEBUG   (  135):          bfd0a4a8  00000000  
+I/DEBUG   (  135):     #00  bfd0a4ac  00000000  
+I/DEBUG   (  135):          bfd0a4b0  bfd0a798  [stack]
+I/DEBUG   (  135):          bfd0a4b4  bfd0a799  [stack]
+I/DEBUG   (  135):          bfd0a4b8  bfd0a798  [stack]
+I/DEBUG   (  135):          bfd0a4bc  bfd0a799  [stack]
+I/DEBUG   (  135):          bfd0a4c0  bfd0a799  [stack]
+I/DEBUG   (  135):          bfd0a4c4  bfd0a798  [stack]
+I/DEBUG   (  135):          bfd0a4c8  bfd0a5ac  [stack]
+I/DEBUG   (  135):          bfd0a4cc  00000000  
+I/DEBUG   (  135):          bfd0a4d0  bfd0a798  [stack]
+I/DEBUG   (  135):          bfd0a4d4  bfd0a799  [stack]
+I/DEBUG   (  135):          bfd0a4d8  bfd0a799  [stack]
+I/DEBUG   (  135):          bfd0a4dc  bfd0a798  [stack]
+I/DEBUG   (  135):          bfd0a4e0  bfd0a798  [stack]
+I/DEBUG   (  135):          bfd0a4e4  bfd0a778  [stack]
+I/DEBUG   (  135):          bfd0a4e8  5efef264  /data/app-lib/com.example.blot.ndkcrash-1/libnative-lib.so
+
+
+********** Crash dump: **********
+Build fingerprint: 'Lenovo/K900_ROW/K900_ROW:4.2.1/JOP40D/K900_ROW_1_S_2_009_0288_131227:user/releasekey'
+pid: 22192, tid: 22192, name: e.blot.ndkcrash  >>> com.example.blot.ndkcrash <<<
+signal 11 (SIGSEGV), code 128 (?), fault addr 00000000
+Stack frame #00  pc 000c4b99  /data/app-lib/com.example.blot.ndkcrash-1/libnative-lib.so: Routine vsnprintf at /Volumes/Android/buildbot/src/android/ndk-r12-release/ndk/sources/android/support/src/stdio/vfprintf.c:719 (discriminator 1)

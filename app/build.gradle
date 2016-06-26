@@ -15,7 +15,6 @@ model {
         buildTypes.with {
             debug {
                 debuggable true
-
             }
         }
 
@@ -39,12 +38,10 @@ model {
         ldLibs.addAll(["m", "GLESv2", "log", "android", "z"])
 
         cppFlags.addAll([
-                "-std=c++11",
-                "-frtti",
-                "-fexceptions",
+            "-std=c++11",
         ])
 
-        abiFilters.addAll(["armeabi-v7a"])
+        abiFilters.addAll(["x86"])
     }
 
     android.sources {
