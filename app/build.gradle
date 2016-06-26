@@ -1,0 +1,73 @@
+apply plugin: 'com.android.model.application'
+
+model {
+    android {
+        compileSdkVersion 19
+        buildToolsVersion '23.0.2'
+
+        defaultConfig.with {
+            applicationId = "com.example.blot.ndkcrash"
+            minSdkVersion.apiLevel = 16
+            targetSdkVersion.apiLevel = 23
+            multiDexEnabled = false
+        }
+
+        buildTypes.with {
+            debug {
+                debuggable true
+
+            }
+        }
+
+        dexOptions.with {
+            preDexLibraries = false
+            jumboMode = false
+            javaMaxHeapSize '2048M'
+        }
+
+        compileOptions.with {
+            incremental = false
+        };
+    }
+
+    android.ndk {
+        moduleName = "native-lib"
+        debuggable = true
+        platformVersion = 16
+        stl = "c++_static"
+        toolchain = "clang"
+        ldLibs.addAll(["m", "GLESv2", "log", "android", "z"])
+
+        cppFlags.addAll([
+                "-std=c++11",
+                "-frtti",
+                "-fexceptions",
+        ])
+
+        abiFilters.addAll(["armeabi-v7a"])
+    }
+
+    android.sources {
+        main {
+            manifest.source {
+                srcDir 'src/main/'
+            }
+
+            java.source {
+                srcDir 'src/main/java'
+            }
+
+            aidl.source {
+                srcDir 'src/main/java'
+            }
+
+            res.source {
+                srcDir 'src/main/res'
+            }
+
+            jni.source {
+                srcDir 'src/main/cpp'
+            }
+        }
+    }
+}
